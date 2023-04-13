@@ -6,28 +6,52 @@
 
 
   </title>
-  <head>  <script src="cart.js"></script>
-  </head>
+  <head>  <script src="cart.js">
+   let count = 0;
+   document.getElementById("cart-notification").textContent = count;
 
+
+  </script>
+    <link rel="stylesheet" type="text/css" href="cart.css">
+
+  </head>
+   <header> <h1>Add Products to the cart</h1>
+   <img src="cartIcon.png" class="icon" alt="cart">
+   <span id="cart-notification"></span>
+
+   </header>
   <body >
 
-    <h1 style="background-color: rgb(199, 37, 172); color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">Add Products to the cart</h1>
-    <script>{ price}</script>
+
    <span>Basket</span>
-   <button onclick="handleAddClick()" class="basket">+</button>
-   <button onclick="handleSubtractClick()" class="basket">-</button>
+   <button onclick="handleAddClick(bAdd)" class="basket" id="bAdd">+</button>
 
+
+   <button onclick="handleSubtractClick(bMin)" class="basket" id="bMin">-</button>
+   <span id="basket-price"></span>
+   <span id="basket-discount"></span>
+
+   <br/>
    <span>Clock</span>
-   <button  onclick="handleAddClick()" class="clock">+</button>
-   <button  onclick="handleSubtractClick()" class="clock">-</button>
-
+   <button  onclick="handleAddClick(cAdd)" class="clock" id="cAdd">+</button>
+   <button  onclick="handleSubtractClick(cMin)" class="clock" id="cMin">-</button>
+   <span id="clock-price"></span>
+   <span id="clock-discount"></span>
+   <br/>
    <span>Lamp</span>
-   <button  onclick="handleAddClick()" class="lamp">+</button>
-   <button  onclick="handleSubtractClick()" class="lamp">-</button>
-
+   <button  onclick="handleAddClick(lAdd)" class="lamp" id="lAdd">+</button>
+   <button  onclick="handleSubtractClick(lMin)" class="lamp" id="lMin">-</button>
+   <span id="lamp-price"></span>
+   <span id="lamp-discount"></span>
+   <br/>
    <span>Painting</span>
-   <button  onclick="handleAddClick()" class="painting">+</button>
-   <button  onclick="handleSubtractClick()" class="painting">+</button>
-
+   <button  onclick="handleAddClick(pAdd)" class="painting" id="pAdd">+</button>
+   <button  onclick="handleSubtractClick(pMin)" class="painting" id="pMin">-</button>
+   <span id="painting-price"></span>
+   <span id="painting-discount"></span>
+  <br/>
+   Total Items :<span id="Total-Items"> </span> <br/>
+   Total Price :<span id="Total-Price"></span><br/>
+   Total Discount:  <span id="Total-Discount"></span>
   </body>
 </html>
