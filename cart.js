@@ -110,12 +110,12 @@ function handleSubtractClick(param) {
 
 
   if (param == bMin) {
-    if(Products[0].quantity >=0 && Products[1].price >=0 ){
+
       Products[0].quantity = Products[1].quantity - 1;
-      Products[0].price = Products[1].price -500;
+      Products[0].price = Products[1].price - 500;
       if(Products[0].price<1000){
       Products[0].discount = 0;
-      }
+
       console.log("clock quantity",Products[0].quantity, "price ", Products[0].price );
       document.getElementById("basket-price").textContent = "Price: " + Products[0].price;
       document.getElementById("basket-discount").textContent = "discount:  - " + Products[0].discount;
