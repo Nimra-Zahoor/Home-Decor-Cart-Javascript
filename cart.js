@@ -27,13 +27,14 @@ let Products = [
 
 let count = 0, Total_Price = 0 , Total_Discount = 0 , Total_Items = 0;
 function handleAddClick(param) {
+  console.log(Products,param)
+
   count = count + 1;
-  console.log("///////count",count)
   if(count>0){
   document.getElementById("cart-notification").style.display = "block";
   document.getElementById("cart-notification").textContent = count;}
 
-  if (param == bAdd) {
+  if (param == 1) {
     Products[0].quantity = Products[0].quantity + 1;
     Products[0].price = Products[0].price+ 500;
     if( Products[0].price>3000)
@@ -47,7 +48,7 @@ function handleAddClick(param) {
 
 
   }
-  else if (param == cAdd) {
+  else if (param == 4) {
     Products[1].quantity = Products[1].quantity + 1;
     Products[1].price = Products[1].price+ 1000;
     if( Products[1].price>3000)
@@ -59,7 +60,7 @@ function handleAddClick(param) {
      document.getElementById("clock-price").textContent = "Price: " + Products[1].price;
      document.getElementById("clock-discount").textContent = "discount:  - " + Products[1].discount;
   }
-  else if (param == lAdd)
+  else if (param == 2)
   {
      Products[2].quantity = Products[2].quantity + 1;
      Products[2].price = Products[2].price+ 300;
@@ -72,7 +73,7 @@ function handleAddClick(param) {
     document.getElementById("lamp-price").textContent = "Price: " + Products[2].price;
      document.getElementById("lamp-discount").textContent = "discount:  - " + Products[2].discount;
   }
-    else if (param == pAdd)
+    else if (param == 3)
     {
       Products[3].quantity = Products[3].quantity + 1;
       Products[3].price = Products[3].price+ 2000;

@@ -119,4 +119,14 @@ button:hover {
   padding: 10px;
   border-radius: 5px;
 }
-
+#cart-notification {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(231, 19, 19);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999;
+}
