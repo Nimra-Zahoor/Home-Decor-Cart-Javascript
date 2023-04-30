@@ -1,6 +1,8 @@
 *{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #24292e;
+
+
 }
 button {
   background-color: #8556a5;
@@ -15,6 +17,7 @@ button {
 
 button:hover {
   background-color: #bd7aab;
+  cursor: pointer;
 }
 .icon{
   cursor: pointer;
@@ -50,13 +53,22 @@ button:hover {
   right: 10px;
   background-color: rgb(231, 19, 19);
   color: white;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
   z-index: 9999;
 }
+.sidebar.open {
+  width: 700px; /* when the sidebar is open, set the width to 700px */
+}
+
+/* add an "open" class to the sidebar when the open button is clicked */
+.openbtn:focus + .sidebar {
+  width: 700px;
+}
+
 .sidebar {
   height: 100%;
-  width: 500px;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -75,6 +87,7 @@ button:hover {
   color: #fefefe;
   display: block;
   transition: 0.3s;
+  width: 1000px;
 }
 
 .sidebar a:hover {
@@ -108,15 +121,30 @@ header {
   background-image: linear-gradient(to bottom, #8556a5, #bd7aab, #f9a7a7);
   color: #fff;
   padding: 20px;
-  position: relative;
 }
+.closeBtn{
+  cursor: pointer;
+  position: absolute;
 
+  background-color: #f61111;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  margin-right: 5px;
+
+  top: 20px;
+  left: 10px;
+
+  padding: 10px;
+  border-radius: 5px;
+
+}
 header h1 {
   margin: 0;
   font-size: 36px;
   text-align: center;
   position: relative;
-  z-index: 2;
 }
 
 header:before {

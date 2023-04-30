@@ -30,7 +30,7 @@ function togglePanel() {
 }
 
 function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("mySidebar").style.width = "450px";
   document.getElementById("main").style.marginRight = "250px";
 }
 
