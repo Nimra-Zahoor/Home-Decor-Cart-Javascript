@@ -5,11 +5,92 @@
     <link rel="stylesheet" href="Home.css">
   </head>
   <body>
-    <script src="cart.js"></script>
     <header>
+<div id="mySidebar" class="sidebar">
+
+  <button class="closeBtn" onclick="closeNav()">X</button>
+    <table>
+
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Add</th>
+          <th>Subtract</th>
+          <th>Price</th>
+          <th>Discount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basket</td>
+          <td>
+            <button onclick="handleAddClick(1)" class="basket" id="bAdd">+</button>
+          </td>
+          <td>
+            <button onclick="handleSubtractClick(1)" class="basket" id="bMin">-</button>
+          </td>
+          <td><span id="basket-price"></span></td>
+          <td><span id="basket-discount"></span></td>
+        </tr>
+        <tr>
+          <td>Clock</td>
+          <td>
+            <button onclick="handleAddClick(2)" class="clock" id="cAdd">+</button>
+          </td>
+          <td>
+            <button onclick="handleSubtractClick(2)" class="clock" id="cMin">-</button>
+          </td>
+          <td><span id="clock-price"></span></td>
+          <td><span id="clock-discount"></span></td>
+        </tr>
+        <tr>
+          <td>Lamp</td>
+          <td>
+            <button onclick="handleAddClick(3)" class="lamp" id="lAdd">+</button>
+          </td>
+          <td>
+            <button onclick="handleSubtractClick(3)" class="lamp" id="lMin">-</button>
+          </td>
+          <td><span id="lamp-price"></span></td>
+          <td><span id="lamp-discount"></span></td>
+        </tr>
+        <tr>
+          <td>Painting</td>
+          <td>
+            <button onclick="handleAddClick(4)" class="painting" id="pAdd">+</button>
+          </td>
+          <td>
+            <button onclick="handleSubtractClick(4)" class="painting" id="pMin">-</button>
+          </td>
+          <td><span id="painting-price"></span></td>
+          <td><span id="painting-discount"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      Total Items: <span id="Total-Items"></span>
+    </div>
+    <div>
+      Total Price: <span id="Total-Price"></span>
+    </div>
+    <div>
+      Total Discount: <span id="Total-Discount"></span>
+    </div>
+
+</div>
+
+    </div>
+    <script src="cart.js"></script>
+
       <h1>Decor Den</h1>
-      <a href="cart.html"><img src="cartIcon.png" class="icon" alt="cart"></a>
-      <span id="cart-notification"></span>
+
+
+      <div id="main">
+
+        <div onclick="openNav()"><img src="cartIcon.png" class="icon" alt="cart"></div>
+        <span id="cart-notification"></span>
+      </div>
     </header>
     <main>
       <div class="product-container">

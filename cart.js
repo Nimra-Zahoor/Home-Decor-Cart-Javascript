@@ -24,6 +24,21 @@ let Products = [
     class: 'painting',
   }
 ];
+function togglePanel() {
+  var panel = document.querySelector('.slide-panel');
+  panel.classList.toggle('open');
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
 
 let count = 0, Total_Price = 0 , Total_Discount = 0 , Total_Items = 0;
 function handleAddClick(param) {
@@ -36,6 +51,8 @@ function handleAddClick(param) {
 
   if (param == 1) {
     Products[0].quantity = Products[0].quantity + 1;
+    console.log("basket quantity", Products[0].quantity, "price ", Products[0].price);
+
     Products[0].price = Products[0].price+ 500;
     if( Products[0].price>3000)
     {
@@ -48,7 +65,7 @@ function handleAddClick(param) {
 
 
   }
-  else if (param == 4) {
+  else if (param == 2) {
     Products[1].quantity = Products[1].quantity + 1;
     Products[1].price = Products[1].price+ 1000;
     if( Products[1].price>3000)
@@ -60,7 +77,7 @@ function handleAddClick(param) {
      document.getElementById("clock-price").textContent = "Price: " + Products[1].price;
      document.getElementById("clock-discount").textContent = "discount:  - " + Products[1].discount;
   }
-  else if (param == 2)
+  else if (param == 3)
   {
      Products[2].quantity = Products[2].quantity + 1;
      Products[2].price = Products[2].price+ 300;
@@ -73,7 +90,7 @@ function handleAddClick(param) {
     document.getElementById("lamp-price").textContent = "Price: " + Products[2].price;
      document.getElementById("lamp-discount").textContent = "discount:  - " + Products[2].discount;
   }
-    else if (param == 3)
+    else if (param == 4)
     {
       Products[3].quantity = Products[3].quantity + 1;
       Products[3].price = Products[3].price+ 2000;
@@ -108,7 +125,7 @@ function handleSubtractClick(param) {
     document.getElementById("cart-notification").style.display = "block";
     document.getElementById("cart-notification").textContent = count;
 
-    if (param == bMin) {
+    if (param == 1) {
       Products[0].quantity = Products[0].quantity - 1;
       Products[0].price = Products[0].price - 500;
       if (Products[0].price < 1000) {
@@ -117,7 +134,7 @@ function handleSubtractClick(param) {
       console.log("basket quantity", Products[0].quantity, "price ", Products[0].price);
       document.getElementById("basket-price").textContent = "Price: " + Products[0].price;
       document.getElementById("basket-discount").textContent = "discount:  - " + Products[0].discount;
-    } else if (param == cMin) {
+    } else if (param == 2) {
       Products[1].quantity = Products[1].quantity - 1;
       Products[1].price = Products[1].price - 1000;
       if (Products[1].price < 1000) {
@@ -126,7 +143,7 @@ function handleSubtractClick(param) {
       console.log("clock quantity", Products[1].quantity, "price ", Products[1].price);
       document.getElementById("clock-price").textContent = "Price: " + Products[1].price;
       document.getElementById("clock-discount").textContent = "discount:  - " + Products[1].discount;
-    } else if (param == lMin) {
+    } else if (param == 3) {
       Products[2].quantity = Products[2].quantity - 1;
       Products[2].price = Products[2].price - 300;
       if (Products[2].price < 1000) {
@@ -135,7 +152,7 @@ function handleSubtractClick(param) {
       console.log("lamp quantity", Products[2].quantity, "price ", Products[2].price);
       document.getElementById("lamp-price").textContent = "Price: " + Products[2].price;
       document.getElementById("lamp-discount").textContent = "discount:  - " + Products[2].discount;
-    } else if (param == pMin) {
+    } else if (param == 4) {
       Products[3].quantity = Products[3].quantity - 1;
       Products[3].price = Products[3].price - 2000;
       if (Products[3].price < 1000) {
